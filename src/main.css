@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Red Hat Display', sans-serif;
+}
+.App{
+	padding: 10% 30% !important
+}
+.timeline-item,.active-timeline-item,.pending-timeline-item{
+	padding-left: 5%; 
+	margin: 0px;
+	padding-bottom: 15px; 
+	position: relative;
+}
+.timeline-wrapper ::after{
+	content: '';
+	width: 2px;
+	height: 100%;
+	background-color: #4C9A2A;
+	position: absolute;
+	left: -4px;
+	top: 0;
+}
+.active-timeline-wrapper ::after,
+.pending-timeline-wrapper ::after
+{
+	content: '';
+	width: 2px;
+	height: 100%;
+	background-color: #ACACAC;
+	position: absolute;
+	left: -4px;
+	top: 0;
+}
+
+.timeline-wrapper:last-child ::after
+{
+	content: '';
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 2px solid #9CBA7F;
+	background-color: #4C9A2A;
+	position: absolute;
+	left: -12px;
+	top: 0px;
+	z-index: 9;
+}
+
+.pending-timeline-wrapper:last-child ::after
+{
+	content: '';
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 2px solid white;
+	background-color: #D4D4D4;
+	position: absolute;
+	left: -12px;
+	top: 0px;
+	z-index: 9;
+}
+
+.active-timeline-wrapper:last-child ::after
+{
+	content: '';
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 2px solid #4C9A2A;
+	background-color: white;
+	position: absolute;
+	left: -12px;
+	top: 0px;
+	z-index: 9;
+}
+
+.timeline-item ::after{
+	content: '';
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 2px solid white;
+	background-color: #4C9A2A;
+	position: absolute;
+	left: -12px;
+	top: 0px;
+	z-index: 9;
+}
+.pending-timeline-item ::after{
+	content: '';
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 2px solid white;
+	background-color: #D4D4D4;
+	position: absolute;
+	left: -12px;
+	top: 0px;
+	z-index: 9;
+}
+
+.active-timeline-item ::after{
+	content: '';
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	border: 2px solid #4C9A2A ;
+	background-color: white ;
+	position: absolute;
+	left: -12px;
+	top: 0px;
+	z-index: 9;
+}
+.timeline-date{
+	font-weight: bold;
+	color: #787874;
+	font-size: 13px;
+}
+.timeline-staus{
+	font-weight: bold;
+	font-size: 18px;
+	color: #404040;
+}
+.timeline-details{
+	font-size: 13px;
+}
+.pending-timeline-date{
+	font-weight: bold;
+	color: #ADAAAA;
+	font-size: 13px;
+}
+.pending-timeline-staus{
+	font-weight: bold;
+	font-size: 18px;
+	color: #ADAAAA;
+}
+.pending-timeline-details{
+	font-size: 13px;
+	color: #ADAAAA;
+}
+#err-msg{
+	padding: 10px;
+    color: red;
+}
